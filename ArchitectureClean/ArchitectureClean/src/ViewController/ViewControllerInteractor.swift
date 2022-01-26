@@ -19,5 +19,21 @@ class ViewControllerInteractor {
 
 // MARK: - Buisness logic
 extension ViewControllerInteractor: ViewControllerBusinessLogic {
-    func fetchData() {}
+    func fetchData() {
+        var backendResponse = [BackendModel]()
+        let model = BackendModel(
+            vcId: "0",
+            name: "Name",
+            text: "Text",
+            rating: 5,
+            symbolCount: 100
+        )
+        backendResponse.append(model)
+        backendResponse.append(model)
+        backendResponse.append(model)
+        backendResponse.append(model)
+        backendResponse.append(model)
+        backendResponse.append(model)
+        presenter?.present(data: backendResponse)
+    }
 }

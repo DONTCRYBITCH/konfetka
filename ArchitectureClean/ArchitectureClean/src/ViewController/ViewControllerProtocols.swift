@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol ViewControllerDisplaylogic: AnyObject {
-    func displayData()
+protocol ViewControllerPresentationLogic {
+    func present(data: [BackendModel])
 }
 
-protocol ViewControllerPresentationLogic {
-    func presentData()
+protocol ViewControllerDisplaylogic: AnyObject {
+    func display(data: [ViewControllerCellModel])
 }
 
 protocol ViewControllerBusinessLogic {

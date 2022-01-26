@@ -8,7 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private var interactor: ViewControllerBusinessLogic
+    private var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .green
+        return tableView
+    }()
+    
+    private var interactor: ViewControllerBusinessLogic?
+    private var dataToDisplay = [ViewControllerCellModel]()
 
     init(
         interactor: ViewControllerBusinessLogic
@@ -22,14 +30,45 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        title = "Clean Arch"
+        view.backgroundColor = .white
+        setupView()
     }
 
     // MARK: - Private methods
-    private func setup() {}
+    private func setupView(){
+        view.addSubview(tableView)
+        setupTableView()
+    }
+    private func setupTableView() {
+        tableView.register(ViewControllerCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataToDisplay.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let tableViewCell = UITableViewCell()
+        return tableViewCell
+    }
+
 }
 // MARK: - Display logic
 extension ViewController: ViewControllerDisplaylogic {
-    func displayData() {}
+    func display(data: [ViewControllerCellModel]) {
+        dataToDisplay.removeAll()
+        dataToDisplay.append(contentsOf: data)
+        tableView.reloadData()
+    }
 }
 

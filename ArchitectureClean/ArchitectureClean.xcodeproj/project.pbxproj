@@ -15,6 +15,10 @@
 		84CB452827A0019F00B18267 /* ViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB452727A0019F00B18267 /* ViewControllerPresenter.swift */; };
 		84CB452A27A001AE00B18267 /* ViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB452927A001AE00B18267 /* ViewControllerInteractor.swift */; };
 		84CB452D27A0092A00B18267 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB452C27A0092A00B18267 /* ViewControllerAssembly.swift */; };
+		84D3FCC827A022EF001F2DD0 /* ViewControllerCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3FCC727A022EF001F2DD0 /* ViewControllerCellModel.swift */; };
+		84D3FCCA27A0233D001F2DD0 /* ViewControllerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3FCC927A0233D001F2DD0 /* ViewControllerModels.swift */; };
+		84D3FCCD27A046D5001F2DD0 /* ViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3FCCC27A046D5001F2DD0 /* ViewControllerCell.swift */; };
+		84D3FCD027A04B65001F2DD0 /* BackendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3FCCF27A04B65001F2DD0 /* BackendModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		84CB452727A0019F00B18267 /* ViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenter.swift; sourceTree = "<group>"; };
 		84CB452927A001AE00B18267 /* ViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerInteractor.swift; sourceTree = "<group>"; };
 		84CB452C27A0092A00B18267 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		84D3FCC727A022EF001F2DD0 /* ViewControllerCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCellModel.swift; sourceTree = "<group>"; };
+		84D3FCC927A0233D001F2DD0 /* ViewControllerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModels.swift; sourceTree = "<group>"; };
+		84D3FCCC27A046D5001F2DD0 /* ViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCell.swift; sourceTree = "<group>"; };
+		84D3FCCF27A04B65001F2DD0 /* BackendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,6 @@
 		84D2936827A00FB300D9E278 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				84D2936A27A00FEF00D9E278 /* Models */,
 				84D2936927A00FCF00D9E278 /* ViewController */,
 			);
 			path = src;
@@ -81,18 +88,31 @@
 		84D2936927A00FCF00D9E278 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84D3FCCE27A04B44001F2DD0 /* Models */,
+				84D3FCC627A022D8001F2DD0 /* Mock */,
 				84CB452C27A0092A00B18267 /* ViewControllerAssembly.swift */,
 				843A388F279FFC8700B48CA2 /* ViewController.swift */,
+				84D3FCCC27A046D5001F2DD0 /* ViewControllerCell.swift */,
 				84CB452727A0019F00B18267 /* ViewControllerPresenter.swift */,
 				84CB452927A001AE00B18267 /* ViewControllerInteractor.swift */,
 				84CB452527A0014600B18267 /* ViewControllerProtocols.swift */,
+				84D3FCC927A0233D001F2DD0 /* ViewControllerModels.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		84D2936A27A00FEF00D9E278 /* Models */ = {
+		84D3FCC627A022D8001F2DD0 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				84D3FCC727A022EF001F2DD0 /* ViewControllerCellModel.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		84D3FCCE27A04B44001F2DD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84D3FCCF27A04B65001F2DD0 /* BackendModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,7 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D3FCCA27A0233D001F2DD0 /* ViewControllerModels.swift in Sources */,
+				84D3FCC827A022EF001F2DD0 /* ViewControllerCellModel.swift in Sources */,
+				84D3FCD027A04B65001F2DD0 /* BackendModel.swift in Sources */,
 				843A3890279FFC8700B48CA2 /* ViewController.swift in Sources */,
+				84D3FCCD27A046D5001F2DD0 /* ViewControllerCell.swift in Sources */,
 				843A388C279FFC8700B48CA2 /* AppDelegate.swift in Sources */,
 				84CB452D27A0092A00B18267 /* ViewControllerAssembly.swift in Sources */,
 				84CB452A27A001AE00B18267 /* ViewControllerInteractor.swift in Sources */,
